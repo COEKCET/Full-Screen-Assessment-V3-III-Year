@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Secure Online Exam</title>
+  <title>CMAP</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <style>
     /* ---------- Theme & layout ---------- */
@@ -103,7 +103,7 @@
     <div style="margin-top:6px">
       <span class="timer">⏳ <span id="timer">60:00</span></span>
       &nbsp;&nbsp;
-      <span class="viol-count">⚠ <span id="violCount">0</span> / 5</span>
+      <span class="viol-count">⚠ <span id="violCount">0</span> / 10</span>
     </div>
   </div>
 </header>
@@ -149,7 +149,7 @@
 <div id="reviewModal" class="modal" role="dialog" aria-hidden="true">
   <div class="panel">
     <h3>Review Questions</h3>
-    <p class="small">Click any item to jump to that question. Green = answered • Yellow = review • Gray = unanswered</p>
+    <p class="small">Click any item to jump to that question. Green = answered • Yellow & Purple = review • Gray = unanswered</p>
     <div id="reviewList" class="review-list"></div>
     <div style="text-align:right;margin-top:12px">
       <button class="btn" id="closeReview">Close</button>
@@ -197,7 +197,7 @@ if (!userStr) {
 
 
 /* ---------- Violations & Security ---------- */
-MAX_VIOLATIONS = 5;
+MAX_VIOLATIONS = 10;
 function addViolation(reason){
   if (submitting) return;
   violCount++;
@@ -650,6 +650,7 @@ window.addEventListener('load', ()=> {
 </script>
 </body>
 </html>
+
 
 
 
