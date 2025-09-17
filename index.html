@@ -117,7 +117,7 @@ async function login() {
     console.log("Login response:", data);
 
     if (data.status === 'blocked') {
-      msgBox.style.color = "#ffdddd";
+      msgBox.style.color = "#ff0000";
       msgBox.textContent = data.message || "⚠ You have already submitted the test.";
       return; // stop login
     }
@@ -130,7 +130,7 @@ async function login() {
     role: data.role
   };
   localStorage.setItem('user', JSON.stringify(userObj));
-  msgBox.style.color = "#b3ffb3";
+  msgBox.style.color = "#00ff00";
   msgBox.textContent = "✅ Login Successful! Redirecting...";
 
   setTimeout(async () => {
@@ -159,12 +159,12 @@ async function login() {
     }
   }, 1000);
     } else {
-      msgBox.style.color = "#ffdddd";
+      msgBox.style.color = "#ff0000";
       msgBox.textContent = "❌ Invalid login credentials!";
     }
   } catch (err) {
     console.error("Login error:", err);
-    msgBox.style.color = "#ffdddd";
+    msgBox.style.color = "#ff0000";
     msgBox.textContent = "⚠ Server error. Try again.";
   }
 }
@@ -176,6 +176,7 @@ document.getElementById("reviewBtn").addEventListener("click", () => {
 </script>
 </body>
 </html>
+
 
 
 
